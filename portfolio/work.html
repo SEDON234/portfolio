@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Work — Sem van Dongen</title>
+    <meta
+      name="description"
+      content="Selected works and creative archive of Sem van Dongen. Speculative design, interaction design, editorial posters, and music identities."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="min-h-screen bg-bg text-ink selection:bg-accent selection:text-bg">
+    <!-- Subtle Ambient Texture Layers -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+    <div class="vignette-overlay" aria-hidden="true"></div>
+
+    <!-- Global Persistent Navigation Header -->
+    <header class="header-top fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-line/40 bg-[#0a0a0d]/70 backdrop-blur-sm">
+      <div class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12">
+        <!-- Brand: Sem van Dongen -->
+        <div class="flex items-center">
+          <a href="index.html" class="group inline-flex items-center gap-3.5 focus:outline-none" aria-label="Sem van Dongen — Return to homepage">
+            <div class="flex flex-col">
+              <span class="font-display text-lg uppercase tracking-[0.06em] text-ink transition-colors duration-200 group-hover:text-accent sm:text-xl">
+                SEM VAN DONGEN
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden items-center gap-1 md:flex" aria-label="Main Navigation">
+          <!-- 00 Home -->
+          <a href="index.html" class="group relative flex items-center gap-2 px-4 py-2 font-mono text-xs uppercase tracking-[0.18em] transition-all duration-200 text-ink-dim hover:text-ink">
+            <span class="text-[10px] text-ink-faint opacity-60 group-hover:text-accent">00</span>
+            <span>Home</span>
+            <span class="absolute bottom-0 left-4 right-4 h-[1px] w-0 bg-ink-faint transition-all duration-200 group-hover:w-[calc(100%-32px)]"></span>
+          </a>
+
+          <!-- 01 My Work (Active) -->
+          <a href="work.html" class="group relative flex items-center gap-2 px-4 py-2 font-mono text-xs uppercase tracking-[0.18em] transition-all duration-200 text-accent">
+            <span class="text-[10px] text-ink-faint opacity-60 group-hover:text-accent">01</span>
+            <span>My Work</span>
+            <span class="absolute bottom-0 left-4 right-4 h-[2px] bg-accent shadow-[0_0_8px_#b2ded1]"></span>
+          </a>
+
+          <!-- 02 About Me -->
+          <a href="about.html" class="group relative flex items-center gap-2 px-4 py-2 font-mono text-xs uppercase tracking-[0.18em] transition-all duration-200 text-ink-dim hover:text-ink">
+            <span class="text-[10px] text-ink-faint opacity-60 group-hover:text-accent">02</span>
+            <span>About Me</span>
+            <span class="absolute bottom-0 left-4 right-4 h-[1px] w-0 bg-ink-faint transition-all duration-200 group-hover:w-[calc(100%-32px)]"></span>
+          </a>
+
+          <!-- 03 Contact -->
+          <a href="contact.html" class="group relative flex items-center gap-2 px-4 py-2 font-mono text-xs uppercase tracking-[0.18em] transition-all duration-200 text-ink-dim hover:text-ink">
+            <span class="text-[10px] text-ink-faint opacity-60 group-hover:text-accent">03</span>
+            <span>Contact</span>
+            <span class="absolute bottom-0 left-4 right-4 h-[1px] w-0 bg-ink-faint transition-all duration-200 group-hover:w-[calc(100%-32px)]"></span>
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex items-center gap-3 md:hidden">
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            class="flex h-10 w-10 items-center justify-center border border-line-strong bg-bg-card text-ink transition-colors hover:border-accent hover:text-accent focus:outline-none"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+          >
+            <!-- Hamburger Icon -->
+            <svg id="menu-icon-open" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+            <!-- Close Icon -->
+            <svg id="menu-icon-close" class="h-5 w-5 hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Sheet -->
+      <div id="mobile-menu-drawer" class="hidden border-b border-line bg-[#0a0a0dfc] px-6 py-8 backdrop-blur-xl md:hidden">
+        <div class="mb-6 flex items-center justify-between border-b border-line pb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-ink-faint">
+          <span>Directory // Pages</span>
+          <span>Available for collaboration</span>
+        </div>
+
+        <nav class="flex flex-col gap-2">
+          <!-- 00 Home -->
+          <a href="index.html" class="flex items-center justify-between border-b border-line/60 py-4 font-display text-2xl uppercase tracking-wider text-ink hover:text-accent transition-colors">
+            <span class="flex items-center gap-3">
+              <span class="font-mono text-xs tracking-widest text-ink-faint">00 //</span>
+              Home
+            </span>
+          </a>
+
+          <!-- 01 My Work (Active) -->
+          <a href="work.html" class="flex items-center justify-between border-b border-line/60 py-4 font-display text-2xl uppercase tracking-wider text-accent transition-colors">
+            <span class="flex items-center gap-3">
+              <span class="font-mono text-xs tracking-widest text-ink-faint">01 //</span>
+              My Work
+            </span>
+            <span class="font-mono text-[10px] tracking-widest text-accent bg-accent/10 px-2 py-1 border border-accent/40">
+              ACTIVE
+            </span>
+          </a>
+
+          <!-- 02 About Me -->
+          <a href="about.html" class="flex items-center justify-between border-b border-line/60 py-4 font-display text-2xl uppercase tracking-wider text-ink hover:text-accent transition-colors">
+            <span class="flex items-center gap-3">
+              <span class="font-mono text-xs tracking-widest text-ink-faint">02 //</span>
+              About Me
+            </span>
+          </a>
+
+          <!-- 03 Contact -->
+          <a href="contact.html" class="flex items-center justify-between border-b border-line/60 py-4 font-display text-2xl uppercase tracking-wider text-ink hover:text-accent transition-colors">
+            <span class="flex items-center gap-3">
+              <span class="font-mono text-xs tracking-widest text-ink-faint">03 //</span>
+              Contact
+            </span>
+          </a>
+        </nav>
+
+        <div class="mt-8 pt-4">
+          <a href="contact.html" class="flex w-full items-center justify-center gap-2 border border-accent bg-accent px-6 py-4 font-mono text-xs uppercase tracking-[0.2em] font-bold text-bg transition-all hover:bg-accent/90">
+            <span>Start Something</span>
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Persistent spacing behind fixed header -->
+    <div class="h-[72px]"></div>
+
+    <!-- Main Content Area -->
+    <main class="relative z-10 flex min-h-[calc(100vh-72px)] flex-col">
+      <div class="relative py-12 sm:py-20">
+        <!-- Background Ghost Title -->
+        <div class="pointer-events-none absolute top-10 left-1/2 -translate-x-1/2 select-none opacity-10" aria-hidden="true">
+          <span class="ghost-watermark text-[16vw] leading-none text-accent">
+            PORTFOLIO
+          </span>
+        </div>
+
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+          <!-- Page Head -->
+          <div class="border-b border-line pb-12">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <span class="editorial-kicker">01 // Selected Archive</span>
+              <span class="font-mono text-xs uppercase tracking-widest text-ink-faint">
+                6
+              </span>
+            </div>
+
+            <h1 class="mt-4 font-display text-5xl uppercase leading-[0.9] tracking-tight text-ink sm:text-7xl lg:text-8xl">
+              My Work
+            </h1>
+
+            <p class="mt-6 max-w-3xl font-body text-base leading-relaxed text-ink-dim sm:text-xl">
+              A collection of work made from or of different media. Click any project to open it's biography.
+            </p>
+
+            <!-- Filter Bar -->
+            <div class="mt-10 flex flex-wrap items-center gap-2 pt-6 border-t border-line/50">
+              <span class="mr-3 font-mono text-xs uppercase tracking-widest text-ink-faint flex items-center gap-1.5">
+                <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                </svg>
+                Filter:
+              </span>
+              <button
+                type="button"
+                data-filter="All"
+                class="px-3.5 py-1.5 font-mono text-xs uppercase tracking-wider transition-colors border border-accent bg-accent text-bg font-bold"
+              >
+                All
+              </button>
+              <button
+                type="button"
+                data-filter="Speculative"
+                class="px-3.5 py-1.5 font-mono text-xs uppercase tracking-wider transition-colors border border-line bg-bg-card/50 text-ink-dim hover:border-line-strong hover:text-ink"
+              >
+                Speculative
+              </button>
+              <button
+                type="button"
+                data-filter="Interaction"
+                class="px-3.5 py-1.5 font-mono text-xs uppercase tracking-wider transition-colors border border-line bg-bg-card/50 text-ink-dim hover:border-line-strong hover:text-ink"
+              >
+                Interaction
+              </button>
+              <button
+                type="button"
+                data-filter="Editorial & Poster"
+                class="px-3.5 py-1.5 font-mono text-xs uppercase tracking-wider transition-colors border border-line bg-bg-card/50 text-ink-dim hover:border-line-strong hover:text-ink"
+              >
+                Editorial & Poster
+              </button>
+              <button
+                type="button"
+                data-filter="Music Identity"
+                class="px-3.5 py-1.5 font-mono text-xs uppercase tracking-wider transition-colors border border-line bg-bg-card/50 text-ink-dim hover:border-line-strong hover:text-ink"
+              >
+                Music Identity
+              </button>
+            </div>
+          </div>
+
+          <!-- =================================================================== -->
+          <!-- FILTERED GRID LAYOUT (Shown when specific category is active)       -->
+          <!-- =================================================================== -->
+          <div id="filtered-work-layout" class="hidden">
+            <div id="filtered-grid-container" class="mt-16 grid grid-cols-1 gap-12 md:grid-cols-2"></div>
+          </div>
+
+          <!-- =================================================================== -->
+          <!-- EDITORIAL ASYMMETRICAL LAYOUT (Shown when 'All' is active)          -->
+          <!-- =================================================================== -->
+          <div id="editorial-work-layout" class="mt-20 space-y-28">
+            <!-- =================================================================== -->
+            <!-- 06 — BURG BURG — MUSEUM GAME (INTERACTION & UX/UI DESIGN)           -->
+            <!-- =================================================================== -->
+            <article
+              id="burg-burg-museum-game"
+              data-project-slug="burg-burg-museum-game"
+              class="group cursor-pointer border border-line-strong bg-bg-card/60 p-6 sm:p-10 lg:p-12 transition-all duration-500 hover:border-accent hover:bg-bg-card"
+            >
+              <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
+                <div class="lg:col-span-6">
+                  <div class="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.24em] text-accent">
+                    <span class="font-bold">06 // UX/UI &amp; INTERACTION DESIGN</span>
+                    <span>—</span>
+                    <span>2026</span>
+                  </div>
+
+                  <h2 class="mt-4 font-display text-4xl uppercase leading-[0.92] tracking-tight text-ink sm:text-6xl group-hover:text-accent transition-colors">
+                    Burg Burg – Museum Game
+                  </h2>
+
+                  <p class="mt-3 font-mono text-sm uppercase tracking-[0.16em] text-bone">
+                    Museum Game Concept // Roald Web App
+                  </p>
+
+                  <p class="mt-6 font-body text-base leading-relaxed text-ink-dim sm:text-lg">
+                    An interactive museum game concept aimed at children aged 7–12, designed to transform passive gallery visits into an active, collaborative discovery adventure. Built directly on top of Burg Burg's existing web app, <strong class="text-ink">Roald</strong>, the concept leverages its artwork-scanning technology into a clue-driven treasure hunt.
+                  </p>
+
+                  <div class="mt-6 border-l-2 border-accent pl-4 space-y-2 font-mono text-xs text-ink-dim">
+                    <div class="text-accent font-bold uppercase tracking-wider text-[11px]">How the Game Works:</div>
+                    <div class="text-ink-dim"><span class="text-ink font-semibold">01. Lobby Sync:</span> Children &amp; parents launch Roald and join a shared game lobby.</div>
+                    <div class="text-ink-dim"><span class="text-ink font-semibold">02. Mystery Clues:</span> Receive engaging riddles describing artworks across the museum.</div>
+                    <div class="text-ink-dim"><span class="text-ink font-semibold">03. Gallery Search:</span> Actively explore the exhibitions to find the matching piece.</div>
+                    <div class="text-ink-dim"><span class="text-ink font-semibold">04. Camera Scan:</span> Scan the artwork with Roald's camera to verify and score points.</div>
+                  </div>
+
+                  <div class="mt-6 flex flex-wrap gap-2">
+                    <span class="border border-line bg-bg px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-ink-faint">#UX/UI Design</span>
+                    <span class="border border-line bg-bg px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-ink-faint">#Interaction Design</span>
+                    <span class="border border-line bg-bg px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-ink-faint">#Figma Frames</span>
+                    <span class="border border-line bg-bg px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-ink-faint">#Gamification</span>
+                    <span class="border border-line bg-bg px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-ink-faint">#Roald Web App</span>
+                  </div>
+
+                  <div class="mt-8 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-accent group-hover:underline">
+                    <span>Inspect Figma Frames &amp; UX Flow</span>
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 7h10v10"></path>
+                      <path d="M7 17 17 7"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                  <div class="relative overflow-hidden border border-line bg-black/80 p-4 sm:p-6 shadow-2xl">
+                    <div class="grid grid-cols-3 gap-3 sm:gap-4 items-end justify-center">
+                      <!-- Screen 1: Start Game -->
+                      <div class="overflow-hidden border border-line/80 bg-black shadow-xl transition-transform duration-500 group-hover:-translate-y-1">
+                        <img
+                          src="images/work/Burg burg game collectief 5/roald game screen 1.png"
+                          alt="Burg Burg Museum Game - Start Screen"
+                          class="w-full object-contain"
+                        />
+                        <div class="border-t border-line/60 bg-bg-card/90 px-1.5 py-1 text-center font-mono text-[9px] uppercase tracking-wider text-ink-faint">
+                          Start Route
+                        </div>
+                      </div>
+
+                      <!-- Screen 3: Clue Round 1 (Elevated) -->
+                      <!-- <div class="overflow-hidden border border-accent/80 bg-black shadow-2xl transition-transform duration-500 group-hover:-translate-y-2">
+                        <img
+                          src="images/work/Burg burg game collectief 5/roald game screen 3.png"
+                          alt="Burg Burg Museum Game - Clue Screen"
+                          class="w-full object-contain"
+                        />
+                        <div class="border-t border-accent/50 bg-accent/15 px-1.5 py-1 text-center font-mono text-[9px] uppercase tracking-wider text-accent font-bold">
+                          Ronde 1 Clue
+                        </div>
+                      </div> -->
+
+                      <!-- Screen 5: Won / Points -->
+                      <!-- <div class="overflow-hidden border border-line/80 bg-black shadow-xl transition-transform duration-500 group-hover:-translate-y-1">
+                        <img
+                          src="images/work/Burg burg game collectief 5/roald game screen 5.png"
+                          alt="Burg Burg Museum Game - Score Screen"
+                          class="w-full object-contain"
+                        />
+                        <div class="border-t border-line/60 bg-bg-card/90 px-1.5 py-1 text-center font-mono text-[9px] uppercase tracking-wider text-ink-faint">
+                          +20 Punten
+                        </div>
+                      </div> -->
+                    </div>
+
+                    <div class="mt-4 flex items-center justify-between border-t border-line/60 pt-3 font-mono text-[10px] uppercase tracking-widest text-ink-faint">
+                      <span>Figma Interface Frames</span>
+                      <span class="text-accent">5 Screens // Click to inspect all</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- =================================================================== -->
+            <!-- 01 — DISCURSIVE DESIGN (HERO SCALE)                                -->
+            <!-- =================================================================== -->
+            <article
+              id="discursive-design"
+              data-project-slug="discursive-design"
+              class="group cursor-pointer border border-line-strong bg-bg-card/60 p-6 sm:p-10 lg:p-12 transition-all duration-500 hover:border-accent hover:bg-bg-card"
+            >
+              <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
+                <div class="lg:col-span-5">
+                  <div class="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.24em] text-accent">
+                    <span class="font-bold">01 // HERO ARCHIVE</span>
+                    <span>—</span>
+                    <span>2026</span>
+                  </div>
+
+                  <h2 class="mt-4 font-display text-4xl uppercase leading-[0.92] tracking-tight text-ink sm:text-6xl lg:text-7xl group-hover:text-accent transition-colors">
+                    Reel to Reel
+                  </h2>
+
+                  <p class="mt-3 font-mono text-xs uppercase tracking-[0.18em] text-bone">
+                    Speculative Audio Artifact // iOS 26.3
+                  </p>
+
+                  <p class="mt-6 font-body text-base leading-relaxed text-ink-dim sm:text-lg">
+                    A speculative design artifact that confronts the ephemeral, intangible nature of contemporary digital streaming by reimagining iOS through the physical mechanics of a magnetic reel-to-reel cassette.
+                  </p>
+
+                  <div class="mt-6 flex flex-wrap gap-2">
+                    <span class="border border-line bg-bg px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-ink-faint">#Discursive Design</span>
+                    <span class="border border-line bg-bg px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-ink-faint">#Physical Computing</span>
+                    <span class="border border-line bg-bg px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-ink-faint">#Speculative Object</span>
+                    <span class="border border-line bg-bg px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-ink-faint">#Apple</span>
+                    <span class="border border-line bg-bg px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-ink-faint">#Audio</span>
+                  </div>
+
+                  <div class="mt-8 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-accent group-hover:underline">
+                    <span>Inspect Case Study & Artifacts</span>
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 7h10v10"></path>
+                      <path d="M7 17 17 7"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                  <div class="relative overflow-hidden border border-line bg-black">
+                    <img
+                      src="images/work/discursive-design/discursive-1.jpg"
+                      alt="Discursive Design iOS 26.3 Reel Machine"
+                      class="max-h-[550px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div class="absolute bottom-3 right-3 bg-bg/85 border border-line px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-ink-faint backdrop-blur-sm">
+                      Tangible Speculation // Fig. 01
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- =================================================================== -->
+            <!-- 02 & 05 — HORIZONTAL TENSION: COLLECTIEF 3 + KENNY                  -->
+            <!-- =================================================================== -->
+            <div class="grid grid-cols-1 gap-12 lg:grid-cols-12">
+              <!-- Project 02: Collectief 3 (7 columns) -->
+              <article
+                id="collectief-3"
+                data-project-slug="collectief-3"
+                class="group cursor-pointer border border-line bg-bg-card/40 p-6 sm:p-8 transition-all duration-300 hover:border-accent hover:bg-bg-card lg:col-span-7"
+              >
+                <div class="flex items-center justify-between font-mono text-xs uppercase tracking-widest text-ink-faint">
+                  <span class="text-accent font-bold">02 // SERVICE INTERACTION</span>
+                  <span>2026</span>
+                </div>
+
+                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="overflow-hidden border border-line bg-black aspect-square">
+                    <img
+                      src="images/work/collectief-3/prototype-box.jpg"
+                      alt="Collectief 3 Prototype Box"
+                      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div class="overflow-hidden border border-line bg-black aspect-square">
+                    <img
+                      src="images/work/collectief-3/storyboard.jpg"
+                      alt="Collectief 3 Storyboard"
+                      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+
+                <h3 class="mt-6 font-display text-3xl uppercase tracking-wide text-ink group-hover:text-accent transition-colors sm:text-4xl">
+                  Talk to the hand
+                </h3>
+                <p class="mt-1 font-mono text-xs uppercase tracking-wider text-bone">
+                  Talk to the Hand // Shift Handover Experience
+                </p>
+                <p class="mt-4 font-body text-sm leading-relaxed text-ink-dim">
+                  A multi-stage service concept and physical terminal designed to humanize, stabilize, and safeguard the critical shift handover moment between hospital night nurses and incoming day staff.
+                </p>
+
+                <div class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs uppercase tracking-wider text-accent group-hover:underline">
+                  <span>Open Interaction Blueprint</span>
+                  <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 7h10v10"></path>
+                    <path d="M7 17 17 7"></path>
+                  </svg>
+                </div>
+              </article>
+
+              <!-- Project 05: Kenny (5 columns) -->
+              <article
+                id="point-of-madness-kenny"
+                data-project-slug="point-of-madness-kenny"
+                class="group cursor-pointer border border-line bg-bg-card/40 p-6 sm:p-8 transition-all duration-300 hover:border-ember hover:bg-bg-card lg:col-span-5"
+              >
+                <div class="flex items-center justify-between font-mono text-xs uppercase tracking-widest text-ink-faint">
+                  <span class="text-ember font-bold">05 // SINGLE ARTWORK</span>
+                  <span>2024</span>
+                </div>
+
+                <div class="mt-6 overflow-hidden border border-line-strong bg-black aspect-square">
+                  <img
+                    src="images/work/point-of-madness/album-kenny.jpg"
+                    alt="Point of Madness - Kenny Single Art"
+                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                <h3 class="mt-6 font-display text-3xl uppercase tracking-wide text-ink group-hover:text-ember transition-colors sm:text-4xl">
+                  Point of Madness // Kenny
+                </h3>
+                <p class="mt-1 font-mono text-xs uppercase tracking-wider text-ember">
+                  Point of Madness — EP Artwork
+                </p>
+                <p class="mt-4 font-body text-sm leading-relaxed text-ink-dim">
+                  Single cover artwork for 'Kenny', capturing raw acoustic aggression, visceral tension, and nocturnal paranoia through an intense vermilion gaze.
+                </p>
+
+                <div class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs uppercase tracking-wider text-ember group-hover:underline">
+                  <span>Explore Artwork Detail</span>
+                  <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 7h10v10"></path>
+                    <path d="M7 17 17 7"></path>
+                  </svg>
+                </div>
+              </article>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 03 — COLLECTIEF 1 POSTER (HIGH-IMPACT VERTICAL EDITORIAL)          -->
+            <!-- =================================================================== -->
+            <article
+              id="collectief-1"
+              data-project-slug="collectief-1"
+              class="group cursor-pointer border border-line-strong bg-bg-card/50 p-6 sm:p-10 lg:p-12 transition-all duration-500 hover:border-accent hover:bg-bg-card"
+            >
+              <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
+                <div class="order-2 lg:order-1 lg:col-span-6">
+                  <div class="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.24em] text-accent">
+                    <span class="font-bold">03 // LARGE-FORMAT POSTER</span>
+                    <span>—</span>
+                    <span>2025</span>
+                  </div>
+
+                  <h2 class="mt-4 font-display text-4xl uppercase leading-[0.92] tracking-tight text-ink sm:text-6xl lg:text-7xl group-hover:text-accent transition-colors">
+                    Wij tegen Zij
+                  </h2>
+
+                  <p class="mt-3 font-mono text-sm uppercase tracking-[0.16em] text-bone">
+                    &ldquo;Wij Tegen Zij Kent Geen Vrede&rdquo;
+                  </p>
+
+                  <p class="mt-6 font-body text-base leading-relaxed text-ink-dim sm:text-lg">
+                    A large-format editorial poster exploring ideological polarization, social friction, and the fragility of shared humanity along contemporary political compass axes.
+                  </p>
+
+                  <div class="mt-6 space-y-2 border-l-2 border-line pl-4 font-mono text-xs text-ink-dim">
+                    <div>Format: Large-Format Editorial Print</div>
+                    <div>Focus: Political Compass Polarization</div>
+                    <div>Medium: Ink, Typography & Watercolor Tension</div>
+                  </div>
+
+                  <div class="mt-8 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-accent group-hover:underline">
+                    <span>View Full Poster & Editorial Notes</span>
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 7h10v10"></path>
+                      <path d="M7 17 17 7"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="order-1 lg:order-2 lg:col-span-6 flex justify-center">
+                  <div class="relative max-w-[420px] overflow-hidden border border-line-strong bg-black shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+                    <img
+                      src="images/work/collectief-1/poster-wij-tegen-zij.jpg"
+                      alt="Collectief 1 Poster - Wij Tegen Zij Kent Geen Vrede"
+                      class="w-full object-contain"
+                    />
+                    <div class="absolute top-2 left-2 bg-bg/85 border border-line px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest text-ink-faint">
+                      Original Litho / Editorial
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- =================================================================== -->
+            <!-- 04 — POINT OF MADNESS / NO LONGER HUMAN (RECORD SLEEVE FRAME)     -->
+            <!-- =================================================================== -->
+            <article
+              id="point-of-madness-no-longer-human"
+              data-project-slug="point-of-madness-no-longer-human"
+              class="group cursor-pointer border border-line bg-bg-card/60 p-6 sm:p-10 lg:p-12 transition-all duration-500 hover:border-accent hover:bg-bg-card"
+            >
+              <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
+                <div class="lg:col-span-6 flex justify-center">
+                  <!-- Record Sleeve Mockup Composition -->
+                  <div class="relative flex items-center justify-center">
+                    <!-- Simulated Vinyl Record Disc slipping out -->
+                    <div class="absolute right-[-24px] h-[85%] aspect-square rounded-full bg-[#111] border-4 border-[#222] shadow-2xl flex items-center justify-center transition-transform duration-500 group-hover:translate-x-6">
+                      <div class="h-14 w-14 rounded-full bg-accent/20 border border-accent flex items-center justify-center">
+                        <svg class="h-6 w-6 text-accent animate-spin-slow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <!-- Album Jacket Front Cover -->
+                    <div class="relative z-10 aspect-square max-w-[420px] overflow-hidden border border-line-strong bg-black shadow-2xl">
+                      <img
+                        src="images/work/point-of-madness/album-no-longer-human.jpg"
+                        alt="Point of Madness - No Longer Human Album Artwork"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                  <div class="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.24em] text-accent">
+                    <span class="font-bold">04 // RECORD SLEEVE</span>
+                    <span>—</span>
+                    <span>2026</span>
+                  </div>
+
+                  <h2 class="mt-4 font-display text-4xl uppercase leading-[0.92] tracking-tight text-ink sm:text-6xl group-hover:text-accent transition-colors">
+                    No Longer Human
+                  </h2>
+
+                  <p class="mt-3 font-mono text-sm uppercase tracking-[0.16em] text-bone">
+                    Point of Madness // Debut Release
+                  </p>
+
+                  <p class="mt-6 font-body text-base leading-relaxed text-ink-dim sm:text-lg">
+                    The official album artwork for Point of Madness's release 'No Longer Human', fusing brooding post-punk themes with surrealist figurative darkness and tactile typography.
+                  </p>
+
+                  <div class="mt-6 border-l-2 border-accent pl-4 font-mono text-xs text-ink-dim">
+                    Role: Concept, Vocals, Artwork & Band Direction
+                  </div>
+
+                  <div class="mt-8 flex flex-wrap items-center gap-4">
+                    <span class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-accent group-hover:underline">
+                      <span>Inspect Artwork & Sleeve</span>
+                      <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 7h10v10"></path>
+                        <path d="M7 17 17 7"></path>
+                      </svg>
+                    </span>
+
+                    <a
+                      href="https://pointofmadness.nl/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onclick="event.stopPropagation()"
+                      class="inline-flex items-center gap-2 border border-line-strong bg-bg px-4 py-2 font-mono text-xs uppercase tracking-wider text-ink-dim hover:text-accent hover:border-accent transition-colors"
+                    >
+                      <span>Point of Madness Band</span>
+                      <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 7h10v10"></path>
+                        <path d="M7 17 17 7"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Future Expansion Note -->
+          <div class="mt-28 border border-dashed border-line p-8 text-center bg-bg/50">
+            <span class="font-mono text-xs uppercase tracking-[0.22em] text-ink-faint">
+              Archive Architecture // Ongoing
+            </span>
+            <p class="mt-2 font-body text-sm text-ink-dim">
+              New visual records, music releases, and physical prototypes are cataloged
+              directly through the structured project index.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Immersive Project Overlay Modal -->
+    <div
+      id="project-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+      class="fixed inset-0 z-[100] hidden items-center justify-center overflow-y-auto bg-black/85 p-3 backdrop-blur-md sm:p-6 lg:p-10"
+    >
+      <div
+        id="project-modal-container"
+        class="relative my-auto flex max-h-[92vh] w-full max-w-5xl flex-col border border-line-strong bg-bg-elevated shadow-2xl overflow-hidden"
+        onclick="event.stopPropagation()"
+      >
+        <!-- Top Sticky Bar -->
+        <div class="flex items-center justify-between border-b border-line bg-bg/95 px-6 py-4 backdrop-blur-md">
+          <div class="flex items-center gap-3">
+            <span id="modal-category" class="font-mono text-xs font-bold uppercase tracking-[0.24em] text-accent">
+              PROJECT // CATEGORY
+            </span>
+          </div>
+
+          <button
+            type="button"
+            data-close-project-modal
+            class="group flex h-9 w-9 items-center justify-center border border-line bg-bg-card text-ink transition-colors hover:border-accent hover:text-accent"
+            aria-label="Close project modal"
+          >
+            <svg class="h-5 w-5 transition-transform group-hover:rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Scrollable Modal Content -->
+        <div class="overflow-y-auto p-6 sm:p-10 lg:p-12 space-y-12">
+          <!-- Header Section -->
+          <div class="border-b border-line pb-8">
+            <div id="modal-meta" class="flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-widest text-ink-faint">
+              <!-- Dynamically populated -->
+            </div>
+
+            <h2
+              id="modal-title"
+              class="mt-4 font-display text-4xl uppercase leading-[0.92] tracking-tight text-ink sm:text-6xl lg:text-7xl"
+            >
+              <!-- Dynamically populated -->
+            </h2>
+
+            <p id="modal-subtitle" class="mt-2 font-mono text-sm uppercase tracking-[0.16em] text-accent sm:text-base">
+              <!-- Dynamically populated -->
+            </p>
+
+            <p id="modal-summary" class="mt-6 max-w-3xl font-body text-base leading-relaxed text-ink-dim sm:text-lg">
+              <!-- Dynamically populated -->
+            </p>
+          </div>
+
+          <!-- Primary & Gallery Visuals -->
+          <div class="space-y-6">
+            <div class="flex items-center justify-between border-b border-line pb-2 font-mono text-xs uppercase tracking-widest text-ink-faint">
+              <span>Visual Documentation</span>
+              <span id="modal-doc-count">0 artifacts</span>
+            </div>
+
+            <div id="modal-images" class="grid grid-cols-1 gap-6">
+              <!-- Dynamically populated images -->
+            </div>
+          </div>
+
+          <!-- Detailed Editorial Sections -->
+          <div id="modal-editorial-grid" class="grid grid-cols-1 gap-10 border-t border-line pt-10 md:grid-cols-2">
+            <!-- Dynamically populated context/role/process/result -->
+          </div>
+
+          <!-- Reflection / What I Learned -->
+          <div id="modal-reflection" class="border border-line-strong bg-bg-card p-6 sm:p-8">
+            <!-- Dynamically populated reflection -->
+          </div>
+
+          <!-- Tags & External Link -->
+          <div class="flex flex-col items-start justify-between gap-6 border-t border-line pt-6 sm:flex-row sm:items-center">
+            <div id="modal-tags" class="flex flex-wrap gap-2">
+              <!-- Dynamically populated tags -->
+            </div>
+
+            <div id="modal-link-container">
+              <!-- Dynamically populated link -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Footer Controls -->
+        <div class="flex items-center justify-between border-t border-line bg-bg px-6 py-4 font-mono text-xs uppercase tracking-widest text-ink-faint">
+          <span>Press ESC or click outside to dismiss</span>
+          <button
+            type="button"
+            data-close-project-modal
+            class="text-accent hover:underline focus:outline-none"
+          >
+            [Close Window]
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox Image Pop-Up -->
+    <div
+      id="lightbox-modal"
+      role="dialog"
+      aria-modal="true"
+      class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/85 p-3 backdrop-blur-md sm:p-6 lg:p-10"
+    >
+      <div
+        class="relative my-auto flex max-h-[92vh] w-full max-w-4xl flex-col border border-line-strong bg-bg-elevated shadow-2xl overflow-hidden"
+        onclick="event.stopPropagation()"
+      >
+        <!-- Top Bar with Title and Close Button -->
+        <div class="flex items-center justify-between border-b border-line bg-bg/95 px-5 py-3.5 backdrop-blur-md">
+          <span id="lightbox-caption" class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-accent">
+            Image Detail
+          </span>
+
+          <button
+            type="button"
+            data-close-lightbox
+            class="group flex h-8 w-8 items-center justify-center border border-line bg-bg-card text-ink transition-colors hover:border-accent hover:text-accent focus:outline-none"
+            aria-label="Close image popup"
+          >
+            <svg class="h-4 w-4 transition-transform group-hover:rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Enlarged Image Area -->
+        <div class="flex max-h-[75vh] items-center justify-center bg-black p-2 sm:p-4">
+          <img
+            id="lightbox-img"
+            src=""
+            alt=""
+            class="max-h-[70vh] w-auto max-w-full object-contain"
+          />
+        </div>
+
+        <!-- Bottom Bar: Instructions / Dismiss -->
+        <div class="flex items-center justify-between border-t border-line bg-bg px-5 py-3 font-mono text-[11px] uppercase tracking-wider text-ink-faint">
+          <span id="lightbox-alt"></span>
+          <button
+            type="button"
+            data-close-lightbox
+            class="text-accent hover:underline focus:outline-none"
+          >
+            [Click to close]
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Global Persistent Footer -->
+    <footer class="relative z-10 border-t border-line bg-bg pt-20 pb-12 text-ink">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+        <!-- Top Section: Oversized Editorial Identity -->
+        <div class="grid grid-cols-1 gap-12 border-b border-line pb-16 lg:grid-cols-12">
+          <div class="lg:col-span-7">
+            <span class="font-mono text-xs uppercase tracking-[0.28em] text-accent">— What I want?</span>
+            <h2 class="mt-4 font-display text-4xl uppercase leading-[0.95] tracking-tight text-ink sm:text-6xl lg:text-7xl">
+              To connect People, Ideas & Disciplines.
+            </h2>
+            <p class="mt-6 max-w-xl font-body text-base leading-relaxed text-ink-dim sm:text-lg">
+              Developing a permanent physical cultural haven for experimentation,
+              rehearsals, workshops, recording, and collective creation.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a
+                href="contact.html"
+                class="inline-flex items-center gap-3 border border-accent bg-accent px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] text-bg transition-all hover:bg-accent/90"
+              >
+                <span>Talk to me</span>
+                <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 7h10v10"></path>
+                  <path d="M7 17 17 7"></path>
+                </svg>
+              </a>
+              <a
+                href="work.html"
+                class="inline-flex items-center gap-3 border border-line-strong bg-bg-card px-6 py-3.5 font-mono text-xs uppercase tracking-[0.18em] text-ink transition-all hover:border-accent hover:text-accent"
+              >
+                <span>View work</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="mt-12 flex flex-col items-start justify-between gap-6 font-mono text-xs uppercase tracking-[0.16em] text-ink-faint sm:flex-row sm:items-center">
+          <div class="flex items-center gap-4"></div>
+
+          <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-5">
+            <!-- Column 1: Directory -->
+            <div>
+              <span class="font-mono text-xs uppercase tracking-[0.24em] text-ink-faint">
+                Directory
+              </span>
+              <ul class="mt-4 space-y-2.5 font-mono text-xs uppercase tracking-wider text-ink-dim">
+                <li>
+                  <a href="index.html" class="transition-colors hover:text-accent">
+                    00 // Home
+                  </a>
+                </li>
+                <li>
+                  <a href="work.html" class="transition-colors hover:text-accent">
+                    01 // My Work
+                  </a>
+                </li>
+                <li>
+                  <a href="about.html" class="transition-colors hover:text-accent">
+                    02 // About Me
+                  </a>
+                </li>
+                <li>
+                  <a href="contact.html" class="transition-colors hover:text-accent">
+                    03 // Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 2: Ecosystem -->
+            <div>
+              <span class="font-mono text-xs uppercase tracking-[0.24em] text-ink-faint">
+                More of me
+              </span>
+              <ul class="mt-4 space-y-2.5 font-mono text-xs uppercase tracking-wider text-ink-dim">
+                <li>
+                  <a
+                    href="https://pointofmadness.nl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 transition-colors hover:text-accent"
+                  >
+                    Point of Madness
+                    <svg class="h-3 w-3 opacity-60" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 7h10v10"></path>
+                      <path d="M7 17 17 7"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://open.spotify.com/artist/1YhRX1mRz6rzQofSyzlszi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 transition-colors hover:text-accent"
+                  >
+                    Spotify
+                    <svg class="h-3 w-3 opacity-60" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 7h10v10"></path>
+                      <path d="M7 17 17 7"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/sem_d__/?utm_source=ig_web_button_share_sheet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 transition-colors hover:text-accent"
+                  >
+                    Instagram
+                    <svg class="h-3 w-3 opacity-60" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 7h10v10"></path>
+                      <path d="M7 17 17 7"></path>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Location -->
+            <div class="col-span-2 sm:col-span-1">
+              <span class="font-mono text-xs uppercase tracking-[0.24em] text-ink-faint">
+                Location
+              </span>
+              <p class="mt-4 font-mono text-xs tracking-wider text-ink-dim">
+                Breda & Etten-Leur<br />
+                The Netherlands
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-6">
+            <span>&copy; <span id="current-year">2026</span> Sem van Dongen</span>
+            <span class="hidden sm:inline-block">/</span>
+            <span>All Rights Reserved</span>
+            <span class="hidden sm:inline-block">/</span>
+            <span class="text-accent">semvandongen.com</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/projects-data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      // Project image lightbox: only images inside the opened project gallery are clickable.
+      (() => {
+        const gallery = document.getElementById("modal-images");
+        const lightbox = document.getElementById("lightbox-modal");
+
+        if (!gallery || !lightbox) return;
+
+        const lightboxImage = document.getElementById("lightbox-img");
+        const caption = document.getElementById("lightbox-caption");
+        const altText = document.getElementById("lightbox-alt");
+        const closeButtons = lightbox.querySelectorAll("[data-close-lightbox]");
+
+        const openLightbox = (image) => {
+          const source = image.dataset.lightboxSrc || image.currentSrc || image.src;
+          if (!source) return;
+
+          const figureCaption = image.closest("figure")?.querySelector("figcaption")?.textContent?.trim();
+          const imageCaption = image.dataset.lightboxCaption || figureCaption || image.alt || "Image Detail";
+          const imageAlt = image.dataset.lightboxAlt || image.alt || "";
+
+          lightboxImage.src = source;
+          lightboxImage.alt = imageAlt;
+          caption.textContent = imageCaption;
+          altText.textContent = imageAlt;
+
+          lightbox.classList.remove("hidden");
+          lightbox.classList.add("flex");
+          lightbox.setAttribute("aria-hidden", "false");
+        };
+
+        const closeLightbox = () => {
+          lightbox.classList.add("hidden");
+          lightbox.classList.remove("flex");
+          lightbox.setAttribute("aria-hidden", "true");
+          lightboxImage.src = "";
+          lightboxImage.alt = "";
+        };
+
+        gallery.addEventListener("click", (event) => {
+          const image = event.target.closest("img");
+          if (!image || !gallery.contains(image)) return;
+
+          event.preventDefault();
+          event.stopPropagation();
+          openLightbox(image);
+        });
+
+        lightbox.addEventListener("click", (event) => {
+          if (event.target === lightbox) closeLightbox();
+        });
+
+        closeButtons.forEach((button) => {
+          button.addEventListener("click", closeLightbox);
+        });
+
+        // Capture Escape before the project modal's own Escape handler can close it.
+        window.addEventListener("keydown", (event) => {
+          const isOpen = !lightbox.classList.contains("hidden");
+          if (event.key === "Escape" && isOpen) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            closeLightbox();
+          }
+        }, true);
+      })();
+    </script>
+  </body>
+</html>

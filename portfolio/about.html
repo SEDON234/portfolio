@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me — Sem van Dongen</title>
+    <meta
+      name="description"
+      content="About Sem van Dongen — Multidisciplinary creative studying Communications, Multimedia Design at Avans Breda."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="min-h-screen bg-bg text-ink selection:bg-accent selection:text-bg">
+    <!-- Subtle Ambient Texture Layers -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+    <div class="vignette-overlay" aria-hidden="true"></div>
+
+    <!-- Global Persistent Navigation Header -->
+    <header class="header-top fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-line/40 bg-[#0a0a0d]/70 backdrop-blur-sm">
+      <div class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12">
+        <!-- Brand: Sem van Dongen -->
+        <div class="flex items-center">
+          <a href="index.html" class="group inline-flex items-center gap-3.5 focus:outline-none" aria-label="Sem van Dongen — Return to homepage">
+            <div class="flex flex-col">
+              <span class="font-display text-lg uppercase tracking-[0.06em] text-ink transition-colors duration-200 group-hover:text-accent sm:text-xl">
+                SEM VAN DONGEN
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden items-center gap-1 md:flex" aria-label="Main Navigation">
+          <!-- 00 Home -->
+          <a href="index.html" class="group relative flex items-center gap-2 px-4 py-2 font-mono text-xs uppercase tracking-[0.18em] transition-all duration-200 text-ink-dim hover:text-ink">
+            <span class="text-[10px] text-ink-faint opacity-60 group-hover:text-accent">00</span>
+            <span>Home</span>
+            <span class="absolute bottom-0 left-4 right-4 h-[1px] w-0 bg-ink-faint transition-all duration-200 group-hover:w-[calc(100%-32px)]"></span>
+          </a>
+
+          <!-- 01 My Work -->
+          <a href="work.html" class="group relative flex items-center gap-2 px-4 py-2 font-mono text-xs uppercase tracking-[0.18em] transition-all duration-200 text-ink-dim hover:text-ink">
+            <span class="text-[10px] text-ink-faint opacity-60 group-hover:text-accent">01</span>
+            <span>My Work</span>
+            <span class="absolute bottom-0 left-4 right-4 h-[1px] w-0 bg-ink-faint transition-all duration-200 group-hover:w-[calc(100%-32px)]"></span>
+          </a>
+
+          <!-- 02 About Me (Active) -->
+          <a href="about.html" class="group relative flex items-center gap-2 px-4 py-2 font-mono text-xs uppercase tracking-[0.18em] transition-all duration-200 text-accent">
+            <span class="text-[10px] text-ink-faint opacity-60 group-hover:text-accent">02</span>
+            <span>About Me</span>
+            <span class="absolute bottom-0 left-4 right-4 h-[2px] bg-accent shadow-[0_0_8px_#b2ded1]"></span>
+          </a>
+
+          <!-- 03 Contact -->
+          <a href="contact.html" class="group relative flex items-center gap-2 px-4 py-2 font-mono text-xs uppercase tracking-[0.18em] transition-all duration-200 text-ink-dim hover:text-ink">
+            <span class="text-[10px] text-ink-faint opacity-60 group-hover:text-accent">03</span>
+            <span>Contact</span>
+            <span class="absolute bottom-0 left-4 right-4 h-[1px] w-0 bg-ink-faint transition-all duration-200 group-hover:w-[calc(100%-32px)]"></span>
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex items-center gap-3 md:hidden">
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            class="flex h-10 w-10 items-center justify-center border border-line-strong bg-bg-card text-ink transition-colors hover:border-accent hover:text-accent focus:outline-none"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+          >
+            <!-- Hamburger Icon -->
+            <svg id="menu-icon-open" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+            <!-- Close Icon -->
+            <svg id="menu-icon-close" class="h-5 w-5 hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Sheet -->
+      <div id="mobile-menu-drawer" class="hidden border-b border-line bg-[#0a0a0dfc] px-6 py-8 backdrop-blur-xl md:hidden">
+        <div class="mb-6 flex items-center justify-between border-b border-line pb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-ink-faint">
+          <span>Directory // Pages</span>
+          <span>Available for collaboration</span>
+        </div>
+
+        <nav class="flex flex-col gap-2">
+          <!-- 00 Home -->
+          <a href="index.html" class="flex items-center justify-between border-b border-line/60 py-4 font-display text-2xl uppercase tracking-wider text-ink hover:text-accent transition-colors">
+            <span class="flex items-center gap-3">
+              <span class="font-mono text-xs tracking-widest text-ink-faint">00 //</span>
+              Home
+            </span>
+          </a>
+
+          <!-- 01 My Work -->
+          <a href="work.html" class="flex items-center justify-between border-b border-line/60 py-4 font-display text-2xl uppercase tracking-wider text-ink hover:text-accent transition-colors">
+            <span class="flex items-center gap-3">
+              <span class="font-mono text-xs tracking-widest text-ink-faint">01 //</span>
+              My Work
+            </span>
+          </a>
+
+          <!-- 02 About Me (Active) -->
+          <a href="about.html" class="flex items-center justify-between border-b border-line/60 py-4 font-display text-2xl uppercase tracking-wider text-accent transition-colors">
+            <span class="flex items-center gap-3">
+              <span class="font-mono text-xs tracking-widest text-ink-faint">02 //</span>
+              About Me
+            </span>
+            <span class="font-mono text-[10px] tracking-widest text-accent bg-accent/10 px-2 py-1 border border-accent/40">
+              ACTIVE
+            </span>
+          </a>
+
+          <!-- 03 Contact -->
+          <a href="contact.html" class="flex items-center justify-between border-b border-line/60 py-4 font-display text-2xl uppercase tracking-wider text-ink hover:text-accent transition-colors">
+            <span class="flex items-center gap-3">
+              <span class="font-mono text-xs tracking-widest text-ink-faint">03 //</span>
+              Contact
+            </span>
+          </a>
+        </nav>
+
+        <div class="mt-8 pt-4">
+          <a href="contact.html" class="flex w-full items-center justify-center gap-2 border border-accent bg-accent px-6 py-4 font-mono text-xs uppercase tracking-[0.2em] font-bold text-bg transition-all hover:bg-accent/90">
+            <span>Start Something</span>
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Persistent spacing behind fixed header -->
+    <div class="h-[72px]"></div>
+
+    <!-- Main Content Area -->
+    <main class="relative z-10 flex min-h-[calc(100vh-72px)] flex-col">
+      <div class="relative py-12 sm:py-20 overflow-hidden">
+        <!-- Background Ghost Typography -->
+        <div class="pointer-events-none absolute top-20 right-0 select-none opacity-10" aria-hidden="true">
+          <span class="ghost-watermark text-[16vw] leading-none text-accent">
+            IDENTITY
+          </span>
+        </div>
+
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+          <!-- Page Header -->
+          <div class="border-b border-line pb-12">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <span class="editorial-kicker">02 // who is This?</span>
+              <span class="font-mono text-xs uppercase tracking-widest text-ink-faint">
+                CMD Avans Breda //
+              </span>
+            </div>
+
+            <h1 class="mt-4 font-display text-5xl uppercase leading-[0.9] tracking-tight text-ink sm:text-7xl lg:text-8xl">
+              About Me
+            </h1>
+          </div>
+
+          <!-- ======================================================================= -->
+          <!-- EDITORIAL 5-PHOTOGRAPH COMPOSITION & MANIFESTO                          -->
+          <!-- ======================================================================= -->
+          <div class="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16 items-start">
+            <!-- Left Column: The 5-Photo Editorial Montage -->
+            <div class="lg:col-span-6 space-y-8">
+              <!-- PHOTO 1: Primary Large Stage Portrait -->
+              <div
+                data-lightbox
+                data-lightbox-src="images/about/sem-stage-beams.jpg"
+                data-lightbox-alt="Sem van Dongen on stage with Point of Madness"
+                data-lightbox-caption="Fig. 01 — Point of Madness Live"
+                class="group relative cursor-pointer border border-line-strong bg-bg-card p-3 transition-all duration-500 hover:border-accent"
+              >
+                <div class="relative aspect-[4/5] w-full overflow-hidden bg-black">
+                  <img
+                    src="images/about/sem-stage-beams.jpg"
+                    alt="Sem van Dongen on stage with Point of Madness"
+                    class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent opacity-50"></div>
+                  <div class="absolute bottom-4 left-4 bg-bg/90 border border-line px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-accent">
+                    Fig. 01 — Point of Madness Live
+                  </div>
+                </div>
+              </div>
+
+              <!-- PHOTOS 2 & 3: Asymmetrical Overlapping Duo -->
+              <div class="grid grid-cols-12 gap-4 items-center">
+                <!-- PHOTO 2: The Mountain & Matisse Tattoo -->
+                <div
+                  data-lightbox
+                  data-lightbox-src="images/about/sem-mountain-tattoo.jpg"
+                  data-lightbox-alt="Sem van Dongen in the mountains showing his Matisse tattoo"
+                  data-lightbox-caption="Fig. 02 — Hiking"
+                  class="col-span-7 group relative cursor-pointer border border-line bg-bg-card p-2.5 transition-all duration-300 hover:border-bone hover:-translate-y-1"
+                >
+                  <div class="relative aspect-[3/4] w-full overflow-hidden bg-black">
+                    <img
+                      src="images/about/sem-mountain-tattoo.jpg"
+                      alt="Sem van Dongen in the mountains showing his Matisse tattoo"
+                      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div class="absolute top-2 left-2 bg-bg/85 px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest text-bone border border-line">
+                      Fig. 02 — Hiking
+                    </div>
+                  </div>
+                  <div class="mt-2 flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-ink-faint">
+                    <span>Alps</span>
+                  </div>
+                </div>
+
+                <!-- PHOTO 3: Red Guitar & Performance -->
+                <div
+                  data-lightbox
+                  data-lightbox-src="images/about/sem-guitar-synth.jpg"
+                  data-lightbox-alt="Sem performing with guitar and synth"
+                  data-lightbox-caption="Fig. 03 — Sound"
+                  class="col-span-5 group relative -mt-8 cursor-pointer border border-line-strong bg-bg-elevated p-2 transition-all duration-300 hover:border-accent hover:translate-y-1"
+                >
+                  <div class="relative aspect-square w-full overflow-hidden bg-black">
+                    <img
+                      src="images/about/sem-guitar-synth.jpg"
+                      alt="Sem performing with guitar and synth"
+                      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div class="mt-2 font-mono text-[9px] uppercase tracking-wider text-ink-faint">
+                    Fig. 03 — Sound
+                  </div>
+                </div>
+              </div>
+
+              <!-- PHOTOS 4 & 5: Horizontal Interlocking Pair -->
+              <div class="grid grid-cols-2 gap-4">
+                <!-- PHOTO 4: Synth Performance -->
+                <div
+                  data-lightbox
+                  data-lightbox-src="images/about/sem-synth-performance.jpg"
+                  data-lightbox-alt="Sem at the Korg synth"
+                  data-lightbox-caption="Fig. 04 — Performance"
+                  class="group relative cursor-pointer border border-line bg-bg-card p-2.5 transition-all duration-300 hover:border-accent"
+                >
+                  <div class="relative aspect-[4/3] w-full overflow-hidden bg-black">
+                    <img
+                      src="images/about/sem-synth-performance.jpg"
+                      alt="Sem at the Korg synth"
+                      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div class="mt-2 font-mono text-[9px] uppercase tracking-wider text-ink-faint">
+                    Fig. 04 — Performance
+                  </div>
+                </div>
+
+                <!-- PHOTO 5: Thoughtful Editorial Coat Portrait -->
+                <div
+                  data-lightbox
+                  data-lightbox-src="images/about/sem-coat-portrait.jpg"
+                  data-lightbox-alt="Sem van Dongen portrait"
+                  data-lightbox-caption="Fig. 05 — Random picture of me"
+                  class="group relative cursor-pointer border border-line bg-bg-card p-2.5 transition-all duration-300 hover:border-bone"
+                >
+                  <div class="relative aspect-[4/3] w-full overflow-hidden bg-black">
+                    <img
+                      src="images/about/sem-coat-portrait.jpg"
+                      alt="Sem van Dongen portrait"
+                      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div class="mt-2 font-mono text-[9px] uppercase tracking-wider text-ink-faint">
+                    Fig. 05 — Random picture of me
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Honest Philosophy & The Connector Identity -->
+            <div class="lg:col-span-6 space-y-12">
+              <!-- Core Philosophy Manifesto -->
+              <div class="border-l-2 border-accent pl-6 sm:pl-8 space-y-6">
+                <span class="font-mono text-xs uppercase tracking-[0.24em] text-accent">
+                  Who am I?
+                </span>
+
+                <h2 class="font-display text-3xl uppercase leading-[0.95] tracking-tight text-ink sm:text-4xl lg:text-5xl">
+                  My name is Sem van Dongen.
+                </h2>
+
+                <div class="space-y-4 font-body text-base leading-relaxed text-ink-dim sm:text-lg">
+                  <p>
+I now study Communication & Multimedia Design at Avans Breda.
+
+I am interested in understanding everything there is to know about design. Understanding the language. Understanding the people. Understanding what is possible.
+
+I have learned to use a lot of tools, from building with wood to making a website. I love working with my hands, figuring out what works and being part of what I make.
+
+I think that's what I love about making something interactive: becoming part of the project. I believe people understand things better when they are part of the experience.
+                  </p>
+                  <p>
+                 Making something that helps people, starts a conversation or activates someone is what I have wanted to do since I was little.
+
+It started with music. Making music to express myself and hopefully connect with others.
+
+Art has a way of helping people. It makes me want to do more.
+                  </p>
+                </div>
+              </div>
+
+              <!-- The Creative Spectrum -->
+              <div class="border border-line bg-bg-card p-6 sm:p-8">
+                <h3 class="mt-2 font-display text-2xl uppercase text-ink">
+                  Things i love.
+                </h3>
+
+                <div class="mt-6 grid grid-cols-2 gap-3">
+                  <div class="flex items-center gap-2 border border-line/60 bg-bg px-3 py-2 font-mono text-xs text-ink-dim">
+                    <span>Music & Sound</span>
+                  </div>
+                  <div class="flex items-center gap-2 border border-line/60 bg-bg px-3 py-2 font-mono text-xs text-ink-dim">
+                    <span>Visual Communication</span>
+                  </div>
+                  <div class="flex items-center gap-2 border border-line/60 bg-bg px-3 py-2 font-mono text-xs text-ink-dim">
+                    <span>Physical Prototyping</span>
+                  </div>
+                  <div class="flex items-center gap-2 border border-line/60 bg-bg px-3 py-2 font-mono text-xs text-ink-dim">
+                    <span>Stage & Live Production</span>
+                  </div>
+                  <div class="flex items-center gap-2 border border-line/60 bg-bg px-3 py-2 font-mono text-xs text-ink-dim">
+                    <span>Interactive Design</span>
+                  </div>
+                  <div class="flex items-center gap-2 border border-line/60 bg-bg px-3 py-2 font-mono text-xs text-ink-dim">
+                    <span>Speculative Design</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Lightbox Image Pop-Up -->
+    <div
+      id="lightbox-modal"
+      role="dialog"
+      aria-modal="true"
+      class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/85 p-3 backdrop-blur-md sm:p-6 lg:p-10"
+    >
+      <div
+        class="relative my-auto flex max-h-[92vh] w-full max-w-4xl flex-col border border-line-strong bg-bg-elevated shadow-2xl overflow-hidden"
+        onclick="event.stopPropagation()"
+      >
+        <!-- Top Bar with Title and Close Button -->
+        <div class="flex items-center justify-between border-b border-line bg-bg/95 px-5 py-3.5 backdrop-blur-md">
+          <span id="lightbox-caption" class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-accent">
+            Image Detail
+          </span>
+
+          <button
+            type="button"
+            data-close-lightbox
+            class="group flex h-8 w-8 items-center justify-center border border-line bg-bg-card text-ink transition-colors hover:border-accent hover:text-accent focus:outline-none"
+            aria-label="Close image popup"
+          >
+            <svg class="h-4 w-4 transition-transform group-hover:rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Enlarged Image Area -->
+        <div class="flex max-h-[75vh] items-center justify-center bg-black p-2 sm:p-4">
+          <img
+            id="lightbox-img"
+            src=""
+            alt=""
+            class="max-h-[70vh] w-auto max-w-full object-contain"
+          />
+        </div>
+
+        <!-- Bottom Bar: Instructions / Dismiss -->
+        <div class="flex items-center justify-between border-t border-line bg-bg px-5 py-3 font-mono text-[11px] uppercase tracking-wider text-ink-faint">
+          <span id="lightbox-alt"></span>
+          <button
+            type="button"
+            data-close-lightbox
+            class="text-accent hover:underline focus:outline-none"
+          >
+            [Click to close]
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Global Persistent Footer -->
+    <footer class="relative z-10 border-t border-line bg-bg pt-20 pb-12 text-ink">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+        <!-- Top Section: Oversized Editorial Identity -->
+        <div class="grid grid-cols-1 gap-12 border-b border-line pb-16 lg:grid-cols-12">
+          <div class="lg:col-span-7">
+            <span class="font-mono text-xs uppercase tracking-[0.28em] text-accent">— What I want?</span>
+            <h2 class="mt-4 font-display text-4xl uppercase leading-[0.95] tracking-tight text-ink sm:text-6xl lg:text-7xl">
+              To connect People, Ideas & Disciplines.
+            </h2>
+            <p class="mt-6 max-w-xl font-body text-base leading-relaxed text-ink-dim sm:text-lg">
+              Developing a permanent physical cultural haven for experimentation,
+              rehearsals, workshops, recording, and collective creation.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a
+                href="contact.html"
+                class="inline-flex items-center gap-3 border border-accent bg-accent px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] text-bg transition-all hover:bg-accent/90"
+              >
+                <span>Talk to me</span>
+                <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 7h10v10"></path>
+                  <path d="M7 17 17 7"></path>
+                </svg>
+              </a>
+              <a
+                href="work.html"
+                class="inline-flex items-center gap-3 border border-line-strong bg-bg-card px-6 py-3.5 font-mono text-xs uppercase tracking-[0.18em] text-ink transition-all hover:border-accent hover:text-accent"
+              >
+                <span>View work</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="mt-12 flex flex-col items-start justify-between gap-6 font-mono text-xs uppercase tracking-[0.16em] text-ink-faint sm:flex-row sm:items-center">
+          <div class="flex items-center gap-4"></div>
+
+          <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-5">
+            <!-- Column 1: Directory -->
+            <div>
+              <span class="font-mono text-xs uppercase tracking-[0.24em] text-ink-faint">
+                Directory
+              </span>
+              <ul class="mt-4 space-y-2.5 font-mono text-xs uppercase tracking-wider text-ink-dim">
+                <li>
+                  <a href="index.html" class="transition-colors hover:text-accent">
+                    00 // Home
+                  </a>
+                </li>
+                <li>
+                  <a href="work.html" class="transition-colors hover:text-accent">
+                    01 // My Work
+                  </a>
+                </li>
+                <li>
+                  <a href="about.html" class="transition-colors hover:text-accent">
+                    02 // About Me
+                  </a>
+                </li>
+                <li>
+                  <a href="contact.html" class="transition-colors hover:text-accent">
+                    03 // Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 2: Ecosystem -->
+            <div>
+              <span class="font-mono text-xs uppercase tracking-[0.24em] text-ink-faint">
+                More of me
+              </span>
+              <ul class="mt-4 space-y-2.5 font-mono text-xs uppercase tracking-wider text-ink-dim">
+                <li>
+                  <a
+                    href="https://pointofmadness.nl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 transition-colors hover:text-accent"
+                  >
+                    Point of Madness
+                    <svg class="h-3 w-3 opacity-60" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 7h10v10"></path>
+                      <path d="M7 17 17 7"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://open.spotify.com/artist/1YhRX1mRz6rzQofSyzlszi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 transition-colors hover:text-accent"
+                  >
+                    Spotify
+                    <svg class="h-3 w-3 opacity-60" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 7h10v10"></path>
+                      <path d="M7 17 17 7"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/sem_d__/?utm_source=ig_web_button_share_sheet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 transition-colors hover:text-accent"
+                  >
+                    Instagram
+                    <svg class="h-3 w-3 opacity-60" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 7h10v10"></path>
+                      <path d="M7 17 17 7"></path>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Location -->
+            <div class="col-span-2 sm:col-span-1">
+              <span class="font-mono text-xs uppercase tracking-[0.24em] text-ink-faint">
+                Location
+              </span>
+              <p class="mt-4 font-mono text-xs tracking-wider text-ink-dim">
+                Breda & Etten-Leur<br />
+                The Netherlands
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-6">
+            <span>&copy; <span id="current-year">2026</span> Sem van Dongen</span>
+            <span class="hidden sm:inline-block">/</span>
+            <span>All Rights Reserved</span>
+            <span class="hidden sm:inline-block">/</span>
+            <span class="text-accent">semvandongen.com</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
